@@ -61,7 +61,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           prefixIcon: Icon(Icons.call),
                         ),
                         keyboardType: TextInputType.number,
-                        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                        inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly
+                        ],
                       ),
                       SizedBox(height: 445),
                       Container(
@@ -69,8 +71,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         padding: EdgeInsets.symmetric(horizontal: 16),
                         child: ElevatedButton(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF1E90FF)),
-                            foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                Color(0xFF1E90FF)),
+                            foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
                           ),
                           onPressed: () {
                             setState(() {
@@ -78,7 +82,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               if (isNumberValid) {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => const Homescreen()),
+                                  MaterialPageRoute(
+                                      builder: (context) => const Homescreen()),
                                 );
                               }
                             });
